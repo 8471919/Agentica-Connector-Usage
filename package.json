@@ -1,0 +1,30 @@
+{
+  "name": "agentica-connector-usage",
+  "version": "0.0.1",
+  "description": "Agentica Connector Usage",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "NODE_OPTIONS=--no-deprecation ts-node src/main.ts",
+    "start": "NODE_OPTIONS=--no-deprecation node lib/main.js",
+    "prepare": "ts-patch install && typia patch"
+  },
+  "keywords": [],
+  "author": "Michael",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.3.0",
+    "typescript": "~5.7.3"
+  },
+  "dependencies": {
+    "@agentica/core": "^0.8.0",
+    "@samchon/openapi": "^2.5.3",
+    "@wrtnlabs/connector-gmail": "^0.1.471",
+    "@wrtnlabs/connector-kakao-map": "^0.1.471",
+    "axios": "^1.8.1",
+    "dotenv": "^16.4.7",
+    "openai": "^4.85.4",
+    "typia": "^7.6.4"
+  }
+}
