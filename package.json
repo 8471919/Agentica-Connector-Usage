@@ -18,7 +18,7 @@
     "typescript": "~5.7.3"
   },
   "dependencies": {
-    "@agentica/core": "^0.8.0",
+    "@agentica/core": "^0.8.3",
     "@samchon/openapi": "^2.5.3",
     "@wrtnlabs/connector-gmail": "^0.1.471",
     "@wrtnlabs/connector-kakao-map": "^0.1.471",

@@ -4,9 +4,29 @@ import dotenv from "dotenv";
 import typia from "typia";
 import { GmailService } from "@wrtnlabs/connector-gmail";
 import { Handmade } from "../tools/handmade";
-import { KakaoMapService } from "@wrtnlabs/connector-kakao-map";
+import {
+  IKakaoMapService,
+  KakaoMapService,
+} from "@wrtnlabs/connector-kakao-map";
 
 dotenv.config();
+
+export class KService extends KakaoMapService {
+  constructor(props: IKakaoMapService.IProps) {
+    super(props);
+  }
+
+  /**
+   * KakaoMap
+   */
+  async searchByKeyword(input: IKakaoMapService.SearchByKeywordInput) {
+    const result = await super.searchByKeyword(input);
+    return result;
+  }
+}
+
+const a = typia.llm.applicationOfValidate<KService, "chatgpt">();
+a;
 
 /**
  * 최종적으로 만들어야 하는 Agent입니다.
@@ -18,10 +38,6 @@ dotenv.config();
  * "내 이메일을 7471919@naver.com으로 변경해줘."
  * "강남역 근처 맛집을 찾아서 내 메일로 보내줘."
  * "메일 내용은 알아서 작성해줘."
- *
- * 음... 만약에 강남역 근처 맛집을 검색하는 기능(API)이 없다고 Agent가 대답한다면
- * searchByKeyword 함수를 이용해서 강남역 근처 맛집을 찾아달라고 하시면 됩니다.
- * (아직 개발 진행중이라 오류가 날 수 있습니다.)
  */
 export const goalAgent = new Agentica({
   provider: {
