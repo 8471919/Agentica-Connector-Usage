@@ -21,7 +21,7 @@
     "@agentica/core": "^0.8.3",
     "@samchon/openapi": "^2.5.3",
     "@wrtnlabs/connector-gmail": "^0.1.471",
-    "@wrtnlabs/connector-kakao-map": "^0.1.471",
+    "@wrtnlabs/connector-kakao-map": "^0.1.472",
     "axios": "^1.8.1",
     "dotenv": "^16.4.7",
     "openai": "^4.85.4",
